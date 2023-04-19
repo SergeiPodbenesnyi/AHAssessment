@@ -10,6 +10,6 @@ import Foundation
 class TextConstants {
     static let startJourneyButtonText = "Start Journey"
     
-    static let collectionVCTitle = "Museum"
+    static let collectionVCTitle = "Rijksmuseum"
     static let dismissButtonTitle = "Dismiss"
 }
