@@ -15,6 +15,12 @@
 		8F2A418729EEBC7100F1185D /* AHAssessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A418629EEBC7100F1185D /* AHAssessmentTests.swift */; };
 		8F2A419129EEBC7100F1185D /* AHAssessmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A419029EEBC7100F1185D /* AHAssessmentUITests.swift */; };
 		8F2A419329EEBC7100F1185D /* AHAssessmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A419229EEBC7100F1185D /* AHAssessmentUITestsLaunchTests.swift */; };
+		8F2A41A129EECB9700F1185D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A41A029EECB9700F1185D /* CollectionViewController.swift */; };
+		8F2A41A329EECBAC00F1185D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A41A229EECBAC00F1185D /* DetailsViewController.swift */; };
+		8F2A41A629EECEAF00F1185D /* TextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A41A529EECEAF00F1185D /* TextConstants.swift */; };
+		8F9A749229EF0BBA0032E5F3 /* SizeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9A749129EF0BBA0032E5F3 /* SizeUtils.swift */; };
+		8FFBD43029EFDC0F005AD0BA /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFBD42F29EFDC0F005AD0BA /* Router.swift */; };
+		8FFBD43229EFE7BF005AD0BA /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFBD43129EFE7BF005AD0BA /* ColorConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		8F2A418C29EEBC7100F1185D /* AHAssessmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AHAssessmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F2A419029EEBC7100F1185D /* AHAssessmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHAssessmentUITests.swift; sourceTree = "<group>"; };
 		8F2A419229EEBC7100F1185D /* AHAssessmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHAssessmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8F2A41A029EECB9700F1185D /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		8F2A41A229EECBAC00F1185D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		8F2A41A529EECEAF00F1185D /* TextConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConstants.swift; sourceTree = "<group>"; };
+		8F9A749129EF0BBA0032E5F3 /* SizeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeUtils.swift; sourceTree = "<group>"; };
+		8FFBD42F29EFDC0F005AD0BA /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		8FFBD43129EFE7BF005AD0BA /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +111,9 @@
 			children = (
 				8F2A416F29EEBC6000F1185D /* AppDelegate.swift */,
 				8F2A417129EEBC6000F1185D /* SceneDelegate.swift */,
-				8F2A417329EEBC6000F1185D /* StartViewController.swift */,
+				8F2A419F29EECB8200F1185D /* Controllers */,
+				8F2A41A429EECD7100F1185D /* Constants */,
+				8F9A749029EF0B960032E5F3 /* Utils */,
 				8F2A417829EEBC7000F1185D /* Assets.xcassets */,
 				8F2A417A29EEBC7000F1185D /* LaunchScreen.storyboard */,
 				8F2A417D29EEBC7000F1185D /* Info.plist */,
@@ -122,6 +136,34 @@
 				8F2A419229EEBC7100F1185D /* AHAssessmentUITestsLaunchTests.swift */,
 			);
 			path = AHAssessmentUITests;
+			sourceTree = "<group>";
+		};
+		8F2A419F29EECB8200F1185D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8F2A417329EEBC6000F1185D /* StartViewController.swift */,
+				8F2A41A029EECB9700F1185D /* CollectionViewController.swift */,
+				8F2A41A229EECBAC00F1185D /* DetailsViewController.swift */,
+				8FFBD42F29EFDC0F005AD0BA /* Router.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8F2A41A429EECD7100F1185D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8F2A41A529EECEAF00F1185D /* TextConstants.swift */,
+				8FFBD43129EFE7BF005AD0BA /* ColorConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		8F9A749029EF0B960032E5F3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8F9A749129EF0BBA0032E5F3 /* SizeUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +296,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FFBD43029EFDC0F005AD0BA /* Router.swift in Sources */,
+				8F2A41A129EECB9700F1185D /* CollectionViewController.swift in Sources */,
+				8F9A749229EF0BBA0032E5F3 /* SizeUtils.swift in Sources */,
 				8F2A417429EEBC6000F1185D /* StartViewController.swift in Sources */,
 				8F2A417029EEBC6000F1185D /* AppDelegate.swift in Sources */,
 				8F2A417229EEBC6000F1185D /* SceneDelegate.swift in Sources */,
+				8FFBD43229EFE7BF005AD0BA /* ColorConstants.swift in Sources */,
+				8F2A41A629EECEAF00F1185D /* TextConstants.swift in Sources */,
+				8F2A41A329EECBAC00F1185D /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

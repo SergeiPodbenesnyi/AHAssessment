@@ -19,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
         let startVC = StartViewController()
+        startVC.router = Router()
         window?.rootViewController = startVC
         
     }
