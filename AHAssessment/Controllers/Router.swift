@@ -9,6 +9,12 @@ import UIKit
 
 class Router {
     
+    let dataProvider : DataProvider
+    
+    init(dataProvider: DataProvider) {
+        self.dataProvider = dataProvider
+    }
+    
     private func getNavigationControllerWithRoot(root: UIViewController) -> UINavigationController {
         let navVC = UINavigationController(rootViewController: root)
         navVC.modalPresentationStyle = .fullScreen
@@ -16,7 +22,7 @@ class Router {
     }
     
     private func getCollectionViewController() -> UIViewController {
-        let collectionVC = CollectionViewController()
+        let collectionVC = CollectionViewController(dataProvider: dataProvider)
         return collectionVC
     }
     

@@ -18,8 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
+        
+        let dataProvider = JSONDataProvider()
         let startVC = StartViewController()
-        startVC.router = Router()
+        startVC.router = Router(dataProvider: dataProvider)
         window?.rootViewController = startVC
         
     }

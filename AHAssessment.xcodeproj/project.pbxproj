@@ -18,6 +18,12 @@
 		8F2A41A129EECB9700F1185D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A41A029EECB9700F1185D /* CollectionViewController.swift */; };
 		8F2A41A329EECBAC00F1185D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A41A229EECBAC00F1185D /* DetailsViewController.swift */; };
 		8F2A41A629EECEAF00F1185D /* TextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A41A529EECEAF00F1185D /* TextConstants.swift */; };
+		8F5C951C29F1569F003FD973 /* ArtTypeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C951B29F1569F003FD973 /* ArtTypeHeaderView.swift */; };
+		8F5C951E29F15B88003FD973 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C951D29F15B88003FD973 /* StringConstants.swift */; };
+		8F5C952029F15C43003FD973 /* ArtObjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5C951F29F15C43003FD973 /* ArtObjectCell.swift */; };
+		8F68B93029F07BB5009830C3 /* ArtType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F68B92F29F07BB5009830C3 /* ArtType.swift */; };
+		8F68B93229F0938C009830C3 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F68B93129F0938C009830C3 /* DataProvider.swift */; };
+		8F68B93429F093EA009830C3 /* ArtObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F68B93329F093EA009830C3 /* ArtObject.swift */; };
 		8F9A749229EF0BBA0032E5F3 /* SizeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9A749129EF0BBA0032E5F3 /* SizeUtils.swift */; };
 		8FFBD43029EFDC0F005AD0BA /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFBD42F29EFDC0F005AD0BA /* Router.swift */; };
 		8FFBD43229EFE7BF005AD0BA /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFBD43129EFE7BF005AD0BA /* ColorConstants.swift */; };
@@ -59,6 +65,12 @@
 		8F2A41A029EECB9700F1185D /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		8F2A41A229EECBAC00F1185D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		8F2A41A529EECEAF00F1185D /* TextConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConstants.swift; sourceTree = "<group>"; };
+		8F5C951B29F1569F003FD973 /* ArtTypeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtTypeHeaderView.swift; sourceTree = "<group>"; };
+		8F5C951D29F15B88003FD973 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		8F5C951F29F15C43003FD973 /* ArtObjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtObjectCell.swift; sourceTree = "<group>"; };
+		8F68B92F29F07BB5009830C3 /* ArtType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtType.swift; sourceTree = "<group>"; };
+		8F68B93129F0938C009830C3 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		8F68B93329F093EA009830C3 /* ArtObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtObject.swift; sourceTree = "<group>"; };
 		8F9A749129EF0BBA0032E5F3 /* SizeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeUtils.swift; sourceTree = "<group>"; };
 		8FFBD42F29EFDC0F005AD0BA /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		8FFBD43129EFE7BF005AD0BA /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
@@ -118,6 +130,7 @@
 				8F2A416F29EEBC6000F1185D /* AppDelegate.swift */,
 				8F2A417129EEBC6000F1185D /* SceneDelegate.swift */,
 				8F2A419F29EECB8200F1185D /* Controllers */,
+				8F5C951A29F15682003FD973 /* Views */,
 				8F2A41A429EECD7100F1185D /* Constants */,
 				8FFBD43329EFFDEA005AD0BA /* DataLayer */,
 				8F9A749029EF0B960032E5F3 /* Utils */,
@@ -163,8 +176,18 @@
 			children = (
 				8F2A41A529EECEAF00F1185D /* TextConstants.swift */,
 				8FFBD43129EFE7BF005AD0BA /* ColorConstants.swift */,
+				8F5C951D29F15B88003FD973 /* StringConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		8F5C951A29F15682003FD973 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8F5C951B29F1569F003FD973 /* ArtTypeHeaderView.swift */,
+				8F5C951F29F15C43003FD973 /* ArtObjectCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8F9A749029EF0B960032E5F3 /* Utils */ = {
@@ -179,6 +202,9 @@
 			isa = PBXGroup;
 			children = (
 				8FFBD43429EFFE55005AD0BA /* JSONDataProvider.swift */,
+				8F68B92F29F07BB5009830C3 /* ArtType.swift */,
+				8F68B93129F0938C009830C3 /* DataProvider.swift */,
+				8F68B93329F093EA009830C3 /* ArtObject.swift */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -318,13 +344,19 @@
 				8F2A41A129EECB9700F1185D /* CollectionViewController.swift in Sources */,
 				8F9A749229EF0BBA0032E5F3 /* SizeUtils.swift in Sources */,
 				8F2A417429EEBC6000F1185D /* StartViewController.swift in Sources */,
+				8F5C951E29F15B88003FD973 /* StringConstants.swift in Sources */,
 				8FFBD43529EFFE55005AD0BA /* JSONDataProvider.swift in Sources */,
+				8F68B93029F07BB5009830C3 /* ArtType.swift in Sources */,
+				8F5C952029F15C43003FD973 /* ArtObjectCell.swift in Sources */,
+				8F5C951C29F1569F003FD973 /* ArtTypeHeaderView.swift in Sources */,
 				8FFBD43929F011F8005AD0BA /* AppConfiguration.swift in Sources */,
 				8F2A417029EEBC6000F1185D /* AppDelegate.swift in Sources */,
+				8F68B93429F093EA009830C3 /* ArtObject.swift in Sources */,
 				8F2A417229EEBC6000F1185D /* SceneDelegate.swift in Sources */,
 				8FFBD43229EFE7BF005AD0BA /* ColorConstants.swift in Sources */,
 				8F2A41A629EECEAF00F1185D /* TextConstants.swift in Sources */,
 				8F2A41A329EECBAC00F1185D /* DetailsViewController.swift in Sources */,
+				8F68B93229F0938C009830C3 /* DataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

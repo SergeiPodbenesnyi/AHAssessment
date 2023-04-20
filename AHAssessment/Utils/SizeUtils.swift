@@ -33,4 +33,6 @@ class SizeConstants {
     
     static var preferredButtonHeight: CGFloat = 54.0
     static var preferredButtonCornerRadius = 5.0
+    
+    static var preferredInset = 15.0
 }
