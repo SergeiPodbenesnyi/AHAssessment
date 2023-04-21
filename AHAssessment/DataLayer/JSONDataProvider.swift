@@ -136,7 +136,8 @@ class JSONDataProvider : DataProvider {
         task.resume()
     }
     
-    private func populateTypes(_ types : [[String : Any]]) -> [ArtType] {
+    
+    func populateTypes(_ types : [[String : Any]]) -> [ArtType] {
 
         var artTypes = [ArtType]()
 
@@ -152,7 +153,8 @@ class JSONDataProvider : DataProvider {
         return artTypes
     }
     
-    private func populateArtObjects(_ artObjectsJson: [[String : Any]]) -> [ArtObject] {
+    
+    func populateArtObjects(_ artObjectsJson: [[String : Any]]) -> [ArtObject] {
         
         var artObjects = [ArtObject]()
         
@@ -164,33 +166,34 @@ class JSONDataProvider : DataProvider {
                 webImageUrl = webImageDict["url"] as? String
             }
             
-            if webImageUrl == nil { continue }
+            if webImageUrl == nil || webImageUrl == "" { continue }
             
             let headerImgDict = artObjectJson["headerImage"] as? [String : Any]
             var headerImageUrl: String? = ""
             if let headerImgDict = headerImgDict {
                 headerImageUrl = headerImgDict["url"] as? String
             }
-            if headerImageUrl == nil { continue } //Do not create art object if there is no link for image
+            if headerImageUrl == nil || headerImageUrl == "" { continue } //Do not create art object if there is no link for image
             
             let id = artObjectJson["id"] as? String
             let longTitle = artObjectJson["longTitle"] as? String
             let title = artObjectJson["title"] as? String
             let principalOrFirstMaker = artObjectJson["principalOrFirstMaker"] as? String
             
-            let productionPlacesArray = artObjectJson["productionPlaces"] as? [String]
-            
             var productionPlaces: String? = ""
-            if let productionPlacesArray = productionPlacesArray {
+            let productionPlacesArray = artObjectJson["productionPlaces"] as? [String]
+            if let productionPlacesArray = productionPlacesArray, !productionPlacesArray.isEmpty {
                 for element in productionPlacesArray {
                     if (productionPlaces == "") {
                         productionPlaces = element
                     } else {
                         productionPlaces = productionPlaces! + ", " + element
                     }
-                    
                 }
+            } else {
+                productionPlaces = artObjectJson["productionPlaces"] as? String
             }
+            
             let artObject = ArtObject(id: id ?? "",
                                       longTitle: longTitle ?? "",
                                       title: title ?? "",
