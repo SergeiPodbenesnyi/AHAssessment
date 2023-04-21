@@ -12,7 +12,7 @@ class CollectionViewController: UIViewController,
                                 UICollectionViewDataSource,
                                 UICollectionViewDelegateFlowLayout {
     
-    private var barSize = 44.0
+    var router: Router
     private var cellSide = SizeConstants.screenWidth / 2 - SizeConstants.preferredInset * 1.5
     private var artCollectionView: UICollectionView?
     private var dataProvider: DataProvider
@@ -20,8 +20,9 @@ class CollectionViewController: UIViewController,
     private var artTypesDict: [String: ArtType] = [:]
     
     
-    init(dataProvider: DataProvider) {
+    init(dataProvider: DataProvider, router: Router) {
         self.dataProvider = dataProvider
+        self.router = router
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -44,7 +45,7 @@ class CollectionViewController: UIViewController,
     
     override func viewWillLayoutSubviews() {
         let frame = self.view.frame
-        self.artCollectionView?.frame = CGRectMake(frame.origin.x, frame.origin.y + barSize, frame.size.width, frame.size.height - barSize)
+        self.artCollectionView?.frame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height)
     }
     
     
@@ -199,4 +200,15 @@ class CollectionViewController: UIViewController,
     }
     
     //MARK UICollectionViewDelegate
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if artTypes.count > indexPath.section {
+            let artType = artTypes[indexPath.section]
+            if artType.artObjects.count > indexPath.item {
+                let artObject = artType.artObjects[indexPath.item]
+                let detailsVC = router.getDetailsViewController(artObject: artObject)
+                navigationController?.pushViewController(detailsVC, animated: true)
+            }
+        }
+    }
 }

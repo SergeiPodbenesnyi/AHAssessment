@@ -205,10 +205,10 @@
             filePath = "AHAssessment/DataLayer/JSONDataProvider.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
-            landmarkName = "getArtObjectsForType(artType:onFinish:)"
-            landmarkType = "7">
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "JSONDataProvider"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -337,6 +337,54 @@
             endingLineNumber = "58"
             landmarkName = "init(frame:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C873ABF3-9672-407A-80E7-FCB1FCF6C2D4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AHAssessment/Controllers/DetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "setupSubviews()"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "C873ABF3-9672-407A-80E7-FCB1FCF6C2D4 - 8902ae7c34554ce0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AHAssessment.DetailsViewController.setupSubviews() -&gt; ()"
+                  moduleName = "AHAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergei_podnebesnyi/Projects/Pets/AHAssessment/AHAssessment/Controllers/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "1012">
+               </Location>
+               <Location
+                  uuid = "C873ABF3-9672-407A-80E7-FCB1FCF6C2D4 - 8902ae7c34554ce0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AHAssessment.DetailsViewController.setupSubviews() -&gt; ()"
+                  moduleName = "AHAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergei_podnebesnyi/Projects/Pets/AHAssessment/AHAssessment/Controllers/DetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "1444">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

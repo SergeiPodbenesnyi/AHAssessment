@@ -176,17 +176,7 @@ class JSONDataProvider : DataProvider {
             let id = artObjectJson["id"] as? String
             let longTitle = artObjectJson["longTitle"] as? String
             let title = artObjectJson["title"] as? String
-            let principalOrFirstMakerArray = artObjectJson["principalOrFirstMaker"] as? [String]
-            var principalOrFirstMaker: String? = ""
-            if let principalOrFirstMakerArray = principalOrFirstMakerArray {
-                for element in principalOrFirstMakerArray {
-                    if (principalOrFirstMaker == "") {
-                        principalOrFirstMaker = element
-                    } else {
-                        principalOrFirstMaker = principalOrFirstMaker! + ", " + element
-                    }
-                }
-            }
+            let principalOrFirstMaker = artObjectJson["principalOrFirstMaker"] as? String
             
             let productionPlacesArray = artObjectJson["productionPlaces"] as? [String]
             

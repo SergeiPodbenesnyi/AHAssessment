@@ -22,8 +22,13 @@ class Router {
     }
     
     private func getCollectionViewController() -> UIViewController {
-        let collectionVC = CollectionViewController(dataProvider: dataProvider)
+        let collectionVC = CollectionViewController(dataProvider: dataProvider, router: self)
         return collectionVC
+    }
+    
+    public func getDetailsViewController(artObject: ArtObject) -> UIViewController {
+        let detailsVC = DetailsViewController(artObject: artObject)
+        return detailsVC
     }
     
     public func getNavigationWithCollectionViewController() -> UINavigationController {
@@ -31,6 +36,5 @@ class Router {
         let navVC = getNavigationControllerWithRoot(root: collectionVC)
         return navVC
     }
-    
 }
 
