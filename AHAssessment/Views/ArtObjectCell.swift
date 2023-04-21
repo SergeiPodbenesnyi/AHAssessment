@@ -45,9 +45,10 @@ class ArtObjectCell: UICollectionViewCell {
     
     let label: UILabel = {
         let label = UILabel()
-        label.font = UIFont.preferredFont(forTextStyle: .footnote)
+        label.font = UIFont.systemFont(ofSize: 11, weight: .light)
         label.textColor = .black
         label.textAlignment = .center
+        label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -69,7 +70,7 @@ class ArtObjectCell: UICollectionViewCell {
         label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         label.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         label.widthAnchor.constraint(equalTo: self.widthAnchor, constant: -10).isActive = true
-        label.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        label.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
         imageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         imageView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true

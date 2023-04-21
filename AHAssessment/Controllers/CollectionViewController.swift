@@ -145,10 +145,12 @@ class CollectionViewController: UIViewController,
         return reusableView!
     }
     
+    
     //MARK UICollectionViewDataSource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return artTypes.count
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return artTypes[section].artObjects.count
