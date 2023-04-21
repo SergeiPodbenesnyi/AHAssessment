@@ -5,7 +5,7 @@
 //  Created by Sergei Podnebesnyi on 20.04.2023.
 //
 
-import Foundation
+import UIKit
 
 struct ArtObject {
     var id: String
@@ -15,4 +15,5 @@ struct ArtObject {
     var webImageUrl: String
     var headerImageUrl: String
     var productionPlaces: String
+    var image: UIImage?
 }

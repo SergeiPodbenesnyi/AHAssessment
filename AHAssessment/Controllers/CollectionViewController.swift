@@ -13,19 +13,23 @@ class CollectionViewController: UIViewController,
                                 UICollectionViewDelegateFlowLayout {
     
     private var barSize = 44.0
+    private var cellSide = SizeConstants.screenWidth / 2 - SizeConstants.preferredInset * 1.5
     private var artCollectionView: UICollectionView?
     private var dataProvider: DataProvider
     private var artTypes: [ArtType] = []
     private var artTypesDict: [String: ArtType] = [:]
+    
     
     init(dataProvider: DataProvider) {
         self.dataProvider = dataProvider
         super.init(nibName: nil, bundle: nil)
     }
     
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,10 +41,12 @@ class CollectionViewController: UIViewController,
         setupCollectionView()
     }
     
+    
     override func viewWillLayoutSubviews() {
         let frame = self.view.frame
         self.artCollectionView?.frame = CGRectMake(frame.origin.x, frame.origin.y + barSize, frame.size.width, frame.size.height - barSize)
     }
+    
     
     private func setupDismissButton() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: TextConstants.dismissButtonTitle,
@@ -49,14 +55,15 @@ class CollectionViewController: UIViewController,
                                                             action: #selector(dismissSelf))
     }
     
+    
     @objc private func dismissSelf() {
         dismiss(animated: true)
     }
     
+    
     private func setupCollectionView() {
         
         let flowLayout = UICollectionViewFlowLayout()
-        let cellSide = SizeConstants.screenWidth / 2 - SizeConstants.preferredInset * 1.5
         flowLayout.itemSize = CGSize(width: cellSide, height: cellSide)
         flowLayout.sectionInset = UIEdgeInsets(top: SizeConstants.preferredInset,
                                                left: SizeConstants.preferredInset,
@@ -78,6 +85,7 @@ class CollectionViewController: UIViewController,
         artCollectionView?.dataSource = self
 
     }
+    
     
     private func getArtTypes() {
         dataProvider.getArtTypes { [weak self] result in
@@ -118,10 +126,11 @@ class CollectionViewController: UIViewController,
         }
     }
     
+    
     // Due to a bug in Swift related to generic subclases, we have to specify ObjC delegate method name
     // if it's different than Swift name (https://bugs.swift.org/browse/SR-2817).
     @objc (collectionView:viewForSupplementaryElementOfKind:atIndexPath:)
-        func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         var reusableView : UICollectionReusableView? = nil
 
         if (kind == UICollectionView.elementKindSectionHeader) {
@@ -150,8 +159,40 @@ class CollectionViewController: UIViewController,
         let artCell = collectionView.dequeueReusableCell(withReuseIdentifier: StringConstants.reusableArtObjectCellIdentifier,
                                                         for: indexPath) as? ArtObjectCell
         guard let artCell = artCell else { return UICollectionViewCell() }
-        artCell.backgroundColor = UIColor.blue
-        artCell.text = "bum"
+        artCell.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
+        artCell.layer.cornerRadius = SizeConstants.preferredCellCornerRadius
+        artCell.isLoading = false
+        artCell.imageView.image = nil
+        artCell.currentUrl = nil
+        let artObject = artTypes[indexPath.section].artObjects[indexPath.item]
+        artCell.text = artObject.title
+    
+        let image = artObject.image
+        
+        if (image == nil) {
+            artCell.currentUrl = artObject.webImageUrl
+            artCell.isLoading = true
+            DispatchQueue.global().async { [weak self, indexPath] in
+                guard let strongSelf = self else {
+                    artCell.isLoading = false
+                    return
+                }
+                let newImage = artCell.resizedImage(at: URL(string: artObject.webImageUrl)!,
+                                                    for: CGSize(width: strongSelf.cellSide,
+                                                                height: strongSelf.cellSide))
+                
+                DispatchQueue.main.async { [weak self, indexPath] in
+                    if artCell.currentUrl == artObject.webImageUrl {
+                        artCell.isLoading = false
+                        artCell.imageView.image = newImage
+                    }
+                    self?.artTypes[indexPath.section].artObjects[indexPath.item].image = newImage
+                }
+            }
+        } else {
+            artCell.imageView.image = image
+        }
+        
         return artCell
     }
     

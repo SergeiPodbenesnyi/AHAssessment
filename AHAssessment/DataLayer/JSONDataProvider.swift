@@ -157,6 +157,22 @@ class JSONDataProvider : DataProvider {
         var artObjects = [ArtObject]()
         
         for artObjectJson in artObjectsJson {
+            
+            let webImageDict = artObjectJson["webImage"] as? [String : Any]
+            var webImageUrl: String? = ""
+            if let webImageDict = webImageDict {
+                webImageUrl = webImageDict["url"] as? String
+            }
+            
+            if webImageUrl == nil { continue }
+            
+            let headerImgDict = artObjectJson["headerImage"] as? [String : Any]
+            var headerImageUrl: String? = ""
+            if let headerImgDict = headerImgDict {
+                headerImageUrl = headerImgDict["url"] as? String
+            }
+            if headerImageUrl == nil { continue } //Do not create art object if there is no link for image
+            
             let id = artObjectJson["id"] as? String
             let longTitle = artObjectJson["longTitle"] as? String
             let title = artObjectJson["title"] as? String
@@ -171,19 +187,8 @@ class JSONDataProvider : DataProvider {
                     }
                 }
             }
-            let webImageDict = artObjectJson["webImage"] as? [String : Any]
-            var webImageUrl: String? = ""
-            if let webImageDict = webImageDict {
-                webImageUrl = webImageDict["url"] as? String
-            }
             
-            let headerImgDict = artObjectJson["headerImage"] as? [String : Any]
-            var headerImageUrl: String? = ""
-            if let headerImgDict = headerImgDict {
-                headerImageUrl = headerImgDict["url"] as? String
-            }
-            
-            var productionPlacesArray = artObjectJson["productionPlaces"] as? [String]
+            let productionPlacesArray = artObjectJson["productionPlaces"] as? [String]
             
             var productionPlaces: String? = ""
             if let productionPlacesArray = productionPlacesArray {
@@ -202,7 +207,8 @@ class JSONDataProvider : DataProvider {
                                       principalOrFirstMaker: principalOrFirstMaker ?? "",
                                       webImageUrl: webImageUrl ?? "",
                                       headerImageUrl: headerImageUrl ?? "",
-                                      productionPlaces: productionPlaces ?? "")
+                                      productionPlaces: productionPlaces ?? "",
+                                      image: nil)
             artObjects.append(artObject)
         }
         return artObjects

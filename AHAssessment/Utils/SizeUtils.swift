@@ -35,4 +35,5 @@ class SizeConstants {
     static var preferredButtonCornerRadius = 5.0
     
     static var preferredInset = 15.0
+    static var preferredCellCornerRadius = 10.0
 }

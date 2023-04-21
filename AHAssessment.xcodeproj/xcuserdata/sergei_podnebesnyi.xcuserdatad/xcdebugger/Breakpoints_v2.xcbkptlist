@@ -14,58 +14,10 @@
             filePath = "AHAssessment/Controllers/CollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "setupCollectionView()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "86A0B113-FAEC-48C2-8E06-1A627C689D30"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AHAssessment/Controllers/CollectionViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "collectionView(_:viewForSupplementaryElementOfKind:at:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "86A0B113-FAEC-48C2-8E06-1A627C689D30 - e14e50879c51d4ff"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AHAssessment.CollectionViewController.collectionView(collectionView: __C.UICollectionView, viewForSupplementaryElementOfKind: Swift.String, atIndexPath: __C.NSIndexPath) -&gt; __C.UICollectionReusableView"
-                  moduleName = "AHAssessment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sergei_podnebesnyi/Projects/Pets/AHAssessment/AHAssessment/Controllers/CollectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
-                  offsetFromSymbolStart = "356">
-               </Location>
-               <Location
-                  uuid = "86A0B113-FAEC-48C2-8E06-1A627C689D30 - 7ece5c32cd231f24"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AHAssessment.CollectionViewController.collectionView(_: __C.UICollectionView, viewForSupplementaryElementOfKind: Swift.String, at: Foundation.IndexPath) -&gt; __C.UICollectionReusableView"
-                  moduleName = "AHAssessment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sergei_podnebesnyi/Projects/Pets/AHAssessment/AHAssessment/Controllers/CollectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "280">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -94,8 +46,8 @@
             filePath = "AHAssessment/Controllers/CollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "setupCollectionView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,73 +62,10 @@
             filePath = "AHAssessment/Controllers/CollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "viewWillLayoutSubviews()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "72BD1185-460F-497B-A718-86412EF7390B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AHAssessment/Controllers/CollectionViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "collectionView(_:viewForSupplementaryElementOfKind:at:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "72BD1185-460F-497B-A718-86412EF7390B - 7ece5c32cd2321bb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AHAssessment.CollectionViewController.collectionView(_: __C.UICollectionView, viewForSupplementaryElementOfKind: Swift.String, at: Foundation.IndexPath) -&gt; __C.UICollectionReusableView"
-                  moduleName = "AHAssessment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sergei_podnebesnyi/Projects/Pets/AHAssessment/AHAssessment/Controllers/CollectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "110"
-                  endingLineNumber = "110"
-                  offsetFromSymbolStart = "1332">
-               </Location>
-               <Location
-                  uuid = "72BD1185-460F-497B-A718-86412EF7390B - 7ece5c32cd2321bb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AHAssessment.CollectionViewController.collectionView(_: __C.UICollectionView, viewForSupplementaryElementOfKind: Swift.String, at: Foundation.IndexPath) -&gt; __C.UICollectionReusableView"
-                  moduleName = "AHAssessment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sergei_podnebesnyi/Projects/Pets/AHAssessment/AHAssessment/Controllers/CollectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "110"
-                  endingLineNumber = "110"
-                  offsetFromSymbolStart = "1368">
-               </Location>
-               <Location
-                  uuid = "72BD1185-460F-497B-A718-86412EF7390B - 7ece5c32cd2321bb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AHAssessment.CollectionViewController.collectionView(_: __C.UICollectionView, viewForSupplementaryElementOfKind: Swift.String, at: Foundation.IndexPath) -&gt; __C.UICollectionReusableView"
-                  moduleName = "AHAssessment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sergei_podnebesnyi/Projects/Pets/AHAssessment/AHAssessment/Controllers/CollectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "110"
-                  endingLineNumber = "110"
-                  offsetFromSymbolStart = "1412">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -205,58 +94,10 @@
             filePath = "AHAssessment/DataLayer/JSONDataProvider.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
             landmarkName = "getArtObjectsForType(artType:onFinish:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "75525866-5045-45F4-8577-61E9F5C40402"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AHAssessment/Controllers/CollectionViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "getArtTypes()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "75525866-5045-45F4-8577-61E9F5C40402 - d3b9d02efbfe63a7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Array&lt;AHAssessment.ArtType&gt;, Swift.Error&gt;) -&gt; () in AHAssessment.CollectionViewController.getArtTypes() -&gt; ()"
-                  moduleName = "AHAssessment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sergei_podnebesnyi/Projects/Pets/AHAssessment/AHAssessment/Controllers/CollectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "102"
-                  endingLineNumber = "102"
-                  offsetFromSymbolStart = "616">
-               </Location>
-               <Location
-                  uuid = "75525866-5045-45F4-8577-61E9F5C40402 - b6396868b13879f9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;AHAssessment.ArtObject&gt;, Swift.Error&gt;) -&gt; () in closure #1 () -&gt; () in closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Array&lt;AHAssessment.ArtType&gt;, Swift.Error&gt;) -&gt; () in AHAssessment.CollectionViewController.getArtTypes() -&gt; ()"
-                  moduleName = "AHAssessment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sergei_podnebesnyi/Projects/Pets/AHAssessment/AHAssessment/Controllers/CollectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "192">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -278,22 +119,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FEBA8D93-6C7C-4349-AADF-6A9E871167B1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AHAssessment/Controllers/CollectionViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "getArtTypes()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "1671B5C5-FE16-4BE9-BACA-9E95CAB999BB"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -301,25 +126,9 @@
             filePath = "AHAssessment/Controllers/CollectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
             landmarkName = "collectionView(_:numberOfItemsInSection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A128864B-BDFD-411E-8FE6-48CF44870C97"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AHAssessment/Controllers/CollectionViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "getArtTypes()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -333,10 +142,137 @@
             filePath = "AHAssessment/Views/ArtObjectCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "addSubviews()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AFCDA296-CD50-4124-8478-461196E6D221"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AHAssessment/Controllers/CollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D6A37CE-5B8A-4CF1-A253-65C04C2FDD0F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AHAssessment/Controllers/CollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6D6A37CE-5B8A-4CF1-A253-65C04C2FDD0F - 627b87a3eb26635c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in AHAssessment.CollectionViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "AHAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergei_podnebesnyi/Projects/Pets/AHAssessment/AHAssessment/Controllers/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "1188">
+               </Location>
+               <Location
+                  uuid = "6D6A37CE-5B8A-4CF1-A253-65C04C2FDD0F - 627b87a3eb26635c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in AHAssessment.CollectionViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "AHAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergei_podnebesnyi/Projects/Pets/AHAssessment/AHAssessment/Controllers/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "1312">
+               </Location>
+               <Location
+                  uuid = "6D6A37CE-5B8A-4CF1-A253-65C04C2FDD0F - 1d20b2155fb74bee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 () -&gt; () in AHAssessment.CollectionViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "AHAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergei_podnebesnyi/Projects/Pets/AHAssessment/AHAssessment/Controllers/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "228">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "12917F7D-46A5-4C9C-B7E3-B2692FB9A554"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AHAssessment/Controllers/CollectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "12917F7D-46A5-4C9C-B7E3-B2692FB9A554 - 627b87a3eb26631e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in AHAssessment.CollectionViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "AHAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergei_podnebesnyi/Projects/Pets/AHAssessment/AHAssessment/Controllers/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "548">
+               </Location>
+               <Location
+                  uuid = "12917F7D-46A5-4C9C-B7E3-B2692FB9A554 - 627b87a3eb26631e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in AHAssessment.CollectionViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "AHAssessment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergei_podnebesnyi/Projects/Pets/AHAssessment/AHAssessment/Controllers/CollectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "1012">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
