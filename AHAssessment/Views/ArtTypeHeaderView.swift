@@ -28,7 +28,20 @@ class ArtTypeHeaderView: UICollectionReusableView {
         titleLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         titleLabel.textColor = .black
         addSubview(titleLabel)
-        backgroundColor = .lightGray
+        setGradientBackground()
         backgroundColor?.withAlphaComponent(0.5)
+    }
+    
+    func setGradientBackground() {
+        let colorLeft =  UIColor.lightGray.cgColor
+        let colorRight = UIColor.white.cgColor
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [colorLeft, colorRight]
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
+        gradientLayer.frame = self.bounds
+        self.layer.insertSublayer(gradientLayer, at:0)
     }
 }
