@@ -17,7 +17,8 @@ class CollectionViewController: UIViewController,
     private var artCollectionView: UICollectionView?
     private var dataProvider: DataProvider
     private var artTypes: [ArtType] = []
-    private var artTypesDict: [String: ArtType] = [:]
+    private var currentSection = 1
+    private var totalSections = 1
     
     
     init(dataProvider: DataProvider, router: Router) {
@@ -48,14 +49,12 @@ class CollectionViewController: UIViewController,
         self.artCollectionView?.frame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height)
     }
     
-    
     private func setupDismissButton() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: TextConstants.dismissButtonTitle,
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(dismissSelf))
     }
-    
     
     @objc private func dismissSelf() {
         dismiss(animated: true)
@@ -92,34 +91,18 @@ class CollectionViewController: UIViewController,
         dataProvider.getArtTypes { [weak self] result in
             guard let strongSelf = self else { return }
             
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak self] in
                 switch result {
                 case .failure(let error):
-                    print(error)
+                    self?.showErrorAlert(error)
                 case .success(let artTypes):
                     strongSelf.artTypes = artTypes
-                    for artType in artTypes {
-                        strongSelf.artTypesDict[artType.name] = artType
-                    }
                     strongSelf.artCollectionView?.reloadData()
-                }
-                
-                DispatchQueue.global().async { [weak self] in
-                    guard let strongSelf = self else { return }
-                    for i in 0..<strongSelf.artTypes.count {
-                        let artType = strongSelf.artTypes[i]
-                        strongSelf.dataProvider.getArtObjectsForType(artType: artType.name,
-                                                                    onFinish: { result in
-                            DispatchQueue.main.async {
-                                switch result {
-                                case .failure(let error):
-                                    print(error)
-                                case .success(let artObjects):
-                                    strongSelf.artTypes[i].artObjects = artObjects
-                                    strongSelf.artCollectionView?.reloadSections(IndexSet(integer: i))
-                                }
-                            }
-                        })
+                    strongSelf.totalSections = artTypes.count
+                    
+                    for i in 0..<3 {
+                        strongSelf.updateObjectsInSection(atIndex: i)
+                        strongSelf.currentSection = i
                     }
                 }
             }
@@ -127,6 +110,29 @@ class CollectionViewController: UIViewController,
         }
     }
     
+    
+    private func updateObjectsInSection(atIndex index: Int) {
+        DispatchQueue.global().async { [weak self] in
+            guard let strongSelf = self else { return }
+            let artType = strongSelf.artTypes[index]
+            strongSelf.dataProvider.getArtObjectsForType(artType: artType.name,
+                                                         onFinish: { result in
+                DispatchQueue.main.async { [weak self] in
+                    guard let strongSelf = self else { return }
+                    switch result {
+                    case .failure(let error):
+                        strongSelf.showErrorAlert(error)
+                    case .success(let artObjects):
+                        strongSelf.artTypes[index].artObjects = artObjects
+                        strongSelf.artCollectionView?.reloadSections(IndexSet(integer: index))
+                    }
+                }
+            })
+        }
+    }
+    
+    
+    //MARK: UICollectionViewDataSource
     
     // Due to a bug in Swift related to generic subclases, we have to specify ObjC delegate method name
     // if it's different than Swift name (https://bugs.swift.org/browse/SR-2817).
@@ -147,7 +153,6 @@ class CollectionViewController: UIViewController,
     }
     
     
-    //MARK UICollectionViewDataSource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return artTypes.count
     }
@@ -199,7 +204,7 @@ class CollectionViewController: UIViewController,
         return artCell
     }
     
-    //MARK UICollectionViewDelegate
+    //MARK: UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if artTypes.count > indexPath.section {
@@ -208,6 +213,29 @@ class CollectionViewController: UIViewController,
                 let artObject = artType.artObjects[indexPath.item]
                 let detailsVC = router.getDetailsViewController(artObject: artObject)
                 navigationController?.pushViewController(detailsVC, animated: true)
+            }
+        }
+    }
+    
+    //MARK: Alerts
+    
+    func showErrorAlert(_ error: Error) {
+        let alert = UIAlertController(title: "Something went wrong",
+                                      message: "Error description: \(error.localizedDescription)",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction.init(title: "OK", style: .destructive))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    //MARK: ScrollViewDelegate
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if let indexPaths = artCollectionView?.indexPathsForVisibleItems {
+            for indexPath in indexPaths {
+                if indexPath.section >= currentSection && indexPath.section < totalSections - 1  {
+                    currentSection += 1
+                    updateObjectsInSection(atIndex: currentSection)
+                }
             }
         }
     }
